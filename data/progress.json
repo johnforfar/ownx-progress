@@ -2,17 +2,29 @@
   "updated": "2026-11-06",
   "intro": "Own1 is a personal AI computer you keep at home or in the office. Nexy is the assistant on it, and now on your laptop, your phone and in the cloud too, all connected to your own Own1 over a private network.",
   "facts": [
-    { "value": "3.5 MB", "label": "Nexy Engine: one of the smallest AI agent engines" },
-    { "value": "5", "label": "ways to run Nexy: Own1, Mac, Android, cloud, Docker" },
-    { "value": "100,000+", "label": "open-source apps one click away on OwnXOS" },
-    { "value": "0", "label": "AI models bundled: Nexy uses the ones you already run" }
+    {
+      "value": "3.5 MB",
+      "label": "Nexy Engine: one of the smallest AI agent engines"
+    },
+    {
+      "value": "5",
+      "label": "ways to run Nexy: Own1, Mac, Android, cloud, Docker"
+    },
+    {
+      "value": "100,000+",
+      "label": "open-source apps one click away on OwnXOS"
+    },
+    {
+      "value": "0",
+      "label": "AI models bundled: Nexy uses the ones you already run"
+    }
   ],
   "news": [
     {
       "date": "2026-11",
       "product": "Nexy Engine",
       "title": "A new AI agent engine, built small",
-      "text": "Written in Rust, it is one of the smallest agent engines around: a 3.5 MB program using about 6 MB of memory, so the AI model gets the machine. Open source."
+      "text": "Written in Rust, it is one of the smallest agent engines around: a single 3.5 MB program that leaves the machine's memory to the AI model. Open source."
     },
     {
       "date": "2026-11",
@@ -51,12 +63,12 @@
       "group": "OwnXOS",
       "name": "Own1",
       "status": "live",
-      "summary": "A personal AI computer: private AI that runs on the box, with nothing leaving it unless the owner says yes.",
+      "summary": "A personal AI computer: the AI runs on the box, and your data stays on hardware you own.",
       "highlights": [
         "AI employees that research, design, write and build, with owner approval before anything is published",
         "Image, music, voice and website studios that run entirely on the box"
       ],
-      "next": "Every box proves which software it is running"
+      "next": "Owner approval for every outbound action, and proof of which software each box runs"
     },
     {
       "id": "own-private",
@@ -89,10 +101,13 @@
       "status": "live",
       "summary": "The agent behind Nexy: a new engine in Rust, built to stay out of the AI model's way.",
       "highlights": [
-        "One of the smallest agent engines: 3.5 MB, about 6 MB of memory",
+        "One of the smallest agent engines: a 3.5 MB program",
         "Works with any local AI model server; open source"
       ],
-      "link": { "label": "View the source", "url": "https://github.com/johnforfar/nexy-engine" },
+      "link": {
+        "label": "View the source",
+        "url": "https://github.com/johnforfar/nexy-engine"
+      },
       "next": "Smarter research on slower models"
     },
     {
@@ -105,7 +120,10 @@
         "Uses Ollama or LM Studio and frees the memory when you quit",
         "Signed automatic updates"
       ],
-      "link": { "label": "Download for Mac", "url": "https://github.com/johnforfar/nexy-releases/releases/latest" },
+      "link": {
+        "label": "Download for Mac",
+        "url": "https://github.com/johnforfar/nexy-releases/releases/latest"
+      },
       "next": "Windows, and asking questions about a folder of documents"
     },
     {
@@ -117,7 +135,10 @@
       "highlights": [
         "Android app available to download, with in-app updates"
       ],
-      "link": { "label": "Download for Android", "url": "https://github.com/johnforfar/nexy-releases/releases/latest" },
+      "link": {
+        "label": "Download for Android",
+        "url": "https://github.com/johnforfar/nexy-releases/releases/latest"
+      },
       "next": "Google Play, then iPhone"
     },
     {
@@ -142,7 +163,10 @@
         "A private, isolated machine for each user",
         "Early beta on CPU servers; faster hardware is next"
       ],
-      "link": { "label": "Try the beta", "url": "https://nc.buildooors.com" },
+      "link": {
+        "label": "Try the beta",
+        "url": "https://nc.buildooors.com"
+      },
       "next": "GPU capacity and accounts"
     },
     {
@@ -154,14 +178,44 @@
       "highlights": [
         "Powers the live compute figures on the OpenX Network site"
       ],
-      "link": { "label": "Open the map", "url": "https://earth.ownx.co" },
+      "link": {
+        "label": "Open the map",
+        "url": "https://earth.ownx.co"
+      },
       "next": "Choosing where cloud work runs, by price"
     }
   ],
   "history": [
-    { "month": "July", "items": ["Website builder that runs on the box", "Local music and image studios"] },
-    { "month": "August", "items": ["The Own1 desktop", "Voice studio with your own cloned voice", "Ask questions about your documents"] },
-    { "month": "September", "items": ["Own1 on phones and tablets", "Own Startup business planner", "Per-document privacy controls"] },
-    { "month": "October", "items": ["Nexy becomes the assistant across Own1", "Routines that run around the clock", "AI employees with owner approval"] }
+    {
+      "month": "July",
+      "items": [
+        "Website builder that runs on the box",
+        "Local music and image studios"
+      ]
+    },
+    {
+      "month": "August",
+      "items": [
+        "The Own1 desktop",
+        "Voice studio with your own cloned voice",
+        "Ask questions about your documents"
+      ]
+    },
+    {
+      "month": "September",
+      "items": [
+        "Own1 on phones and tablets",
+        "Own Startup business planner",
+        "Per-document privacy controls"
+      ]
+    },
+    {
+      "month": "October",
+      "items": [
+        "Nexy becomes the assistant across Own1",
+        "Routines that run around the clock",
+        "AI employees with owner approval"
+      ]
+    }
   ]
 }
