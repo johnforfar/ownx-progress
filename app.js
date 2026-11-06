@@ -11,11 +11,7 @@ async function render() {
   $("intro").textContent = d.intro;
   $("facts").innerHTML = d.facts.map((f) => `<div><b>${esc(f.value)}</b><span>${esc(f.label)}</span></div>`).join("");
 
-  const latest = d.tracks
-    .flatMap((t) => t.updates.map((u) => ({ ...u, product: t.name })))
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, 8);
-  $("news").innerHTML = latest.map((u) =>
+  $("news").innerHTML = d.news.map((u) =>
     `<li><time>${month(u.date)}</time><span class="prod">${esc(u.product)}</span><div><b>${esc(u.title)}</b><p>${esc(u.text)}</p></div></li>`).join("");
 
   $("products").innerHTML = d.tracks.map((t) => `
@@ -23,8 +19,8 @@ async function render() {
       <div class="top"><span class="group">${esc(t.group)}</span><span class="st ${t.status}">${label[t.status]}</span></div>
       <h3>${esc(t.name)}</h3>
       <p>${esc(t.summary)}</p>
-      <ul>${t.updates.slice(0, 2).map((u) => `<li><b>${esc(u.title)}</b><span>${month(u.date)} · ${esc(u.text)}</span></li>`).join("")}</ul>
-      ${t.next?.length ? `<p class="next"><b>Next</b>${t.next.map(esc).join(" · ")}</p>` : ""}
+      <ul>${t.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>
+      ${t.next ? `<p class="next"><b>Next</b>${esc(t.next)}</p>` : ""}
       ${t.link ? `<a class="link" href="${esc(t.link.url)}" rel="noopener">${esc(t.link.label)} →</a>` : ""}
     </article>`).join("");
 

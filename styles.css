@@ -49,8 +49,7 @@ section { display: grid; gap: 20px; }
 .card > p { margin: 0; color: var(--muted); font-size: .95rem; }
 .card ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
 .card li { border-left: 2px solid var(--line); padding-left: 12px; }
-.card li b { display: block; font-size: .95rem; font-weight: 600; }
-.card li span { color: var(--muted); font-size: .9rem; }
+.card li { font-size: .93rem; }
 .card .next { font-size: .88rem; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 10px; }
 .card .next b { color: var(--planned); font: 500 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; margin-right: 6px; }
 .card .link { font-size: .9rem; font-weight: 500; }
