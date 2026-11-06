@@ -1,0 +1,282 @@
+{
+  "updated": "2026-11-06",
+  "intro": "Own1 is a personal AI computer. It runs OwnXOS, our open-source operating system, and Nexy is the assistant you talk to. Nexy now also comes to your laptop, your phone and the cloud, and every device can reach your own Own1 over a private, encrypted network.",
+  "facts": [
+    {
+      "value": "245",
+      "label": "improvements shipped to Own1, July to October"
+    },
+    {
+      "value": "100k+",
+      "label": "open-source apps in the App Store"
+    },
+    {
+      "value": "3.5 MB",
+      "label": "Nexy Engine, the agent that runs everywhere"
+    },
+    {
+      "value": "1.0 s",
+      "label": "laptop to Own1 over the private network"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "own-demo",
+      "group": "OwnXOS",
+      "name": "Own1 public demo",
+      "status": "live",
+      "summary": "The desktop guests try on every Own1: Nexy, the studios and the App Store, in timed demo sessions.",
+      "updates": [
+        {
+          "date": "2026-10",
+          "title": "Nexy Teams",
+          "text": "AI employees that research, design, write and build on one box, with a live view of each employee's screen."
+        },
+        {
+          "date": "2026-10",
+          "title": "Approval-gated publishing",
+          "text": "The team drafts, the owner reads the rendered post and approves, and only then does it publish."
+        },
+        {
+          "date": "2026-10",
+          "title": "Four agent frameworks on one box",
+          "text": "Hermes, ZeroClaw, IronClaw and OpenClaw run side by side; Nexy uses them underneath."
+        }
+      ],
+      "next": [
+        "Nexy Engine added as a second engine behind Nexy",
+        "Single-use guest codes on every box"
+      ]
+    },
+    {
+      "id": "own-private",
+      "group": "OwnXOS",
+      "name": "Own1 private desktop",
+      "status": "live",
+      "summary": "A desktop only the owner can open, separate from the public demo, signed in with a key the owner holds.",
+      "updates": [
+        {
+          "date": "2026-11",
+          "title": "Open your Own1 from the Nexy app",
+          "text": "The desktop and Android apps reach the owner's box over the private network and sign in with their own key."
+        },
+        {
+          "date": "2026-10",
+          "title": "Owner mode",
+          "text": "Owner sign-in and a private desktop, with the public demo kept apart."
+        }
+      ],
+      "next": [
+        "Its own model service, separate from the demo",
+        "Approval step before the agent acts on outside content"
+      ]
+    },
+    {
+      "id": "nexy-app",
+      "group": "Nexy",
+      "name": "Nexy app",
+      "status": "live",
+      "summary": "The Nexy app itself: chat, research, projects, files and routines, the same on every device.",
+      "updates": [
+        {
+          "date": "2026-11",
+          "title": "One app, five places",
+          "text": "The same app now runs on Own1, the desktop app, the Docker edition and Nexy Cloud."
+        },
+        {
+          "date": "2026-10",
+          "title": "Nexy is always on",
+          "text": "Nexy became the default across the Own1 desktop, with website edits in place and live browser takeover."
+        }
+      ],
+      "next": [
+        "Studios (image, music, voice, startup) reachable as connectors from any device",
+        "Its own repository"
+      ]
+    },
+    {
+      "id": "nexy-engine",
+      "group": "Nexy",
+      "name": "Nexy Engine",
+      "status": "live",
+      "summary": "A small agent engine in Rust that works with any local model server. Open source.",
+      "link": {
+        "label": "Source",
+        "url": "https://github.com/johnforfar/nexy-engine"
+      },
+      "updates": [
+        {
+          "date": "2026-11",
+          "title": "Version 0.0.3",
+          "text": "Research with sources run by the engine, per-user scoping, a standard agent API, a built-in test page, and guard tests that keep it small."
+        },
+        {
+          "date": "2026-11",
+          "title": "Benchmarked against nine engines",
+          "text": "Same tasks, same model, same machine, with the full results published in the repository."
+        }
+      ],
+      "next": [
+        "Version 0.0.4: better fallbacks when a page can't be read, and a per-answer search budget"
+      ]
+    },
+    {
+      "id": "nexy-desktop",
+      "group": "Nexy",
+      "name": "Nexy for Mac and Windows",
+      "status": "prototype",
+      "summary": "A desktop app that runs Nexy on your computer with the models you already have, or opens Nexy Cloud or your Own1.",
+      "link": {
+        "label": "Download",
+        "url": "https://github.com/johnforfar/nexy-releases/releases/latest"
+      },
+      "updates": [
+        {
+          "date": "2026-11",
+          "title": "Works with Ollama and LM Studio",
+          "text": "Finds and starts your model server, downloads models through it, and frees the memory when you quit. It never bundles a model."
+        },
+        {
+          "date": "2026-11",
+          "title": "Signed automatic updates",
+          "text": "The app checks for new versions and installs signed updates itself."
+        }
+      ],
+      "next": [
+        "Windows build",
+        "Apple notarization",
+        "Ask questions about a folder of documents"
+      ]
+    },
+    {
+      "id": "nexy-mobile",
+      "group": "Nexy",
+      "name": "Nexy for Android and iPhone",
+      "status": "prototype",
+      "summary": "Nexy on your phone, using your own Own1 or Nexy Cloud. The phone needs no model of its own.",
+      "link": {
+        "label": "Android download",
+        "url": "https://github.com/johnforfar/nexy-releases/releases/latest"
+      },
+      "updates": [
+        {
+          "date": "2026-11",
+          "title": "Android app",
+          "text": "Install the APK, open your Own1 over the private network, and get in-app updates."
+        }
+      ],
+      "next": [
+        "Google Play listing",
+        "iPhone app, once the Apple Developer Program is in place"
+      ]
+    },
+    {
+      "id": "network",
+      "group": "Network",
+      "name": "Private network",
+      "status": "prototype",
+      "summary": "An encrypted network joining your devices. Each device's address is made from its own key, so there is no domain or relay to trust.",
+      "updates": [
+        {
+          "date": "2026-11",
+          "title": "Built into the apps",
+          "text": "The desktop and Android apps carry their own network client, with no admin rights needed. Measured 1.0 s from a laptop to Own1, against 3.6 s through a public relay."
+        },
+        {
+          "date": "2026-05",
+          "title": "Every box reachable",
+          "text": "Each Own1 joins the network and gets a web address without router changes."
+        }
+      ],
+      "next": [
+        "Your devices share AI with each other: a phone uses your Own1's GPU",
+        "An open network of nodes that offer spare capacity"
+      ]
+    },
+    {
+      "id": "nexy-cloud",
+      "group": "Nexy",
+      "name": "Nexy Cloud",
+      "status": "prototype",
+      "summary": "Nexy hosted for you, with a private virtual machine per user. The beta runs on CPU servers, so replies are slower than on Own1.",
+      "link": {
+        "label": "Try the beta",
+        "url": "https://nc.buildooors.com"
+      },
+      "updates": [
+        {
+          "date": "2026-11",
+          "title": "A private machine per user",
+          "text": "Each user's agent runs in its own isolated virtual machine with its own storage."
+        },
+        {
+          "date": "2026-11",
+          "title": "Nexy Engine 0.0.3",
+          "text": "Research with sources, scoped to each user."
+        }
+      ],
+      "next": [
+        "GPU capacity for faster replies",
+        "Accounts"
+      ]
+    },
+    {
+      "id": "earth-compute",
+      "group": "Compute",
+      "name": "Earth Compute",
+      "status": "live",
+      "summary": "A live map of what compute costs worldwide, by provider and region.",
+      "link": {
+        "label": "Open",
+        "url": "https://earth.ownx.co"
+      },
+      "updates": [
+        {
+          "date": "2026-10",
+          "title": "Live data for the OpenX Network site",
+          "text": "The OpenX Network app's compute headlines are now served from the Earth Compute API."
+        }
+      ],
+      "next": [
+        "Price data used to choose where cloud work runs"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "month": "July",
+      "items": [
+        "A website builder that runs on the box",
+        "Beat studio and Image Studio, fully local"
+      ]
+    },
+    {
+      "month": "August",
+      "items": [
+        "The Own1 desktop",
+        "OwnVoice Studio",
+        "Ask your own documents",
+        "Power and heat readings for every box"
+      ]
+    },
+    {
+      "month": "September",
+      "items": [
+        "The desktop on phones and tablets",
+        "Own Startup",
+        "Per-document consent and ultra-private mode",
+        "Nexy: one chat over all the apps"
+      ]
+    },
+    {
+      "month": "October",
+      "items": [
+        "Nexy always on",
+        "24/7 routines",
+        "The App Store with every NixOS package",
+        "AI employees in Own Startup",
+        "Owner mode and a one-command test suite"
+      ]
+    }
+  ]
+}
