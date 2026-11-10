@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-10",
   "intro": "Own1 is a personal AI computer you keep at home or in the office. Nexy is the assistant on it, and now on your laptop, your phone and in the cloud too, all connected to your own Own1 over a private network.",
   "facts": [
     {
@@ -7,8 +7,8 @@
       "label": "Nexy Engine: one of the smallest AI agent engines"
     },
     {
-      "value": "5",
-      "label": "ways to run Nexy: Own1, Mac, Android, cloud, Docker"
+      "value": "6",
+      "label": "ways to run Nexy: Own1, Mac, Windows, Android, cloud, Docker"
     },
     {
       "value": "100,000+",
@@ -22,39 +22,39 @@
   "news": [
     {
       "date": "2026-11",
+      "product": "Nexy apps",
+      "title": "Your phone, powered by your gaming PC",
+      "text": "A phone with no AI model of its own asked for an image. The Own1 passed the job to a gaming PC's graphics card and returned it in 17 seconds, about five times faster than the Own1 on its own. Every result says which device made it."
+    },
+    {
+      "date": "2026-11",
+      "product": "Nexy apps",
+      "title": "Nexy beta for Mac, Windows and Android",
+      "text": "One download page with a step-by-step install guide. All three apps tell you when an update is ready."
+    },
+    {
+      "date": "2026-11",
+      "product": "Own1",
+      "title": "Add a device with an 8-character code",
+      "text": "Your Own1 shows a short code, you type it into Nexy, and you approve the device on the Own1 itself. Guest codes let family or a team use your Own1 within limits you set."
+    },
+    {
+      "date": "2026-11",
+      "product": "Security",
+      "title": "Independent security reviews before the beta",
+      "text": "Two reviews of the apps, the web app, the agent engine and the Own1, before opening to testers. The issues found in the apps are fixed."
+    },
+    {
+      "date": "2026-11",
       "product": "Nexy Engine",
       "title": "A new AI agent engine, built small",
       "text": "Written in Rust, it is one of the smallest agent engines around: a single 3.5 MB program that leaves the machine's memory to the AI model. Open source."
     },
     {
       "date": "2026-11",
-      "product": "Nexy apps",
-      "title": "Nexy on your Mac and your phone",
-      "text": "New desktop and Android apps run Nexy on your own device, with signed automatic updates."
-    },
-    {
-      "date": "2026-11",
       "product": "Private network",
       "title": "Open your Own1 from anywhere",
       "text": "The apps reach your Own1 over an encrypted network and sign in with a key only you hold. No router changes, no third-party cloud in the middle."
-    },
-    {
-      "date": "2026-11",
-      "product": "Nexy for Mac",
-      "title": "Works with the AI you already have",
-      "text": "Nexy runs on Ollama or LM Studio, the most popular ways to run AI models at home, instead of bundling its own."
-    },
-    {
-      "date": "2026-11",
-      "product": "Nexy Cloud",
-      "title": "A private AI machine for every user",
-      "text": "In the hosted beta, each person's agent runs in its own isolated virtual machine."
-    },
-    {
-      "date": "2026-10",
-      "product": "Own1",
-      "title": "AI employees on one box",
-      "text": "Nexy Teams staffs a project with AI specialists that research, design, write and build, and nothing is published until the owner approves."
     }
   ],
   "tracks": [
@@ -92,7 +92,7 @@
         "Runs on Own1, Mac, Android, Nexy Cloud and Docker",
         "Researches the web and cites its sources"
       ],
-      "next": "The Own1 studios available from any device"
+      "next": "One request built across all your devices at once, shown live"
     },
     {
       "id": "nexy-engine",
@@ -117,8 +117,8 @@
       "status": "prototype",
       "summary": "Nexy as a desktop app: on your own computer, in Nexy Cloud, or on your Own1.",
       "highlights": [
-        "Uses Ollama or LM Studio and frees the memory when you quit",
-        "Signed automatic updates"
+        "Mac and Windows beta, with a download page and install guide",
+        "Can share its graphics card with your Own1, so your other devices use it"
       ],
       "link": {
         "label": "Download for Mac",
@@ -133,13 +133,14 @@
       "status": "prototype",
       "summary": "Nexy on your phone, powered by your own Own1 or Nexy Cloud. The phone needs no AI model of its own.",
       "highlights": [
-        "Android app available to download, with in-app updates"
+        "Android beta: add it to your Own1 with an 8-character code",
+        "Images and answers can be made on your own computers, through your Own1"
       ],
       "link": {
         "label": "Download for Android",
         "url": "https://github.com/johnforfar/nexy-releases/releases/latest"
       },
-      "next": "Google Play, then iPhone"
+      "next": "iPhone app"
     },
     {
       "id": "network",
