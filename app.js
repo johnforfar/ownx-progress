@@ -25,7 +25,6 @@ async function render() {
     </article>`).join("");
 
   const short = (iso) => { const [, mm, dd] = iso.split("-"); return `${+dd} ${MONTHS[+mm - 1].slice(0, 3)}`; };
-  const took = (h) => h === undefined ? "" : h < 24 ? "Under a day" : `${Math.round(h / 24)} day${Math.round(h / 24) > 1 ? "s" : ""}`;
   $("pace").innerHTML = d.pace.facts.map((f) => `<div><b>${esc(f.value)}</b><span>${esc(f.label)}</span></div>`).join("");
   $("pace-note").textContent = d.pace.note;
   const products = [...new Set(d.shipped.map((s) => s.product))];
@@ -33,10 +32,9 @@ async function render() {
   const draw = () => {
     $("chips").innerHTML = ["All", ...products].map((p) =>
       `<button type="button" aria-pressed="${p === current}" data-p="${esc(p)}">${esc(p)}</button>`).join("");
-    $("shipped").innerHTML = d.shipped.filter((s) => current === "All" || s.product === current).map((s) =>
-      `<li><time datetime="${esc(s.date)}">${short(s.date)}</time><span class="prod">${esc(s.product)}</span>` +
-      `<div><b>${esc(s.title)}</b><p>${esc(s.benefit)}</p></div>` +
-      (s.hours === undefined ? "<span></span>" : `<span class="took" title="Opened for review to shipped">${took(s.hours)}</span>`) + `</li>`).join("");
+    $("shipped").innerHTML = [...d.shipped].sort((a, b) => b.date.localeCompare(a.date)).filter((s) => current === "All" || s.product === current).map((s) =>
+      `<li><time datetime="${esc(s.date)}">${short(s.date)} ${s.date.slice(0, 4)}</time><span class="prod">${esc(s.product)}</span>` +
+      `<div><b>${esc(s.title)}</b><p>${esc(s.benefit)}</p></div></li>`).join("");
   };
   $("chips").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { current = b.dataset.p; draw(); } });
   draw();

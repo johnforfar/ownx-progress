@@ -220,19 +220,11 @@
     }
   ],
   "pace": {
-    "note": "Shipping time runs from when a change is opened for review to when it is merged and released.",
+    "note": "Dates show the day each change was merged and released.",
     "facts": [
       {
         "value": "290+",
         "label": "improvements shipped to Own1 since July"
-      },
-      {
-        "value": "12 h",
-        "label": "typical time from opening a change to shipping it"
-      },
-      {
-        "value": "2 in 3",
-        "label": "changes shipped within a day"
       },
       {
         "value": "34",
@@ -245,15 +237,13 @@
       "date": "2026-11-20",
       "product": "Own1",
       "title": "Every update tested on a brand-new Own1",
-      "benefit": "Each change is built and booted on a fresh box before release, so new owners get exactly what was tested.",
-      "hours": 8
+      "benefit": "Each change is built and booted on a fresh box before release, so new owners get exactly what was tested."
     },
     {
       "date": "2026-11-20",
       "product": "Own1",
       "title": "Leaner AI services, rewritten in Rust",
-      "benefit": "Device pairing and the AI gateway now run as small, fast programs, leaving more of the box for the AI models.",
-      "hours": 54
+      "benefit": "Device pairing and the AI gateway now run as small, fast programs, leaving more of the box for the AI models."
     },
     {
       "date": "2026-11-19",
@@ -265,176 +255,151 @@
       "date": "2026-11-19",
       "product": "Own1",
       "title": "One gateway for every AI model",
-      "benefit": "A single service starts, shares and watches the box's models, and restarts one that stops responding.",
-      "hours": 72
+      "benefit": "A single service starts, shares and watches the box's models, and restarts one that stops responding."
     },
     {
       "date": "2026-11-18",
       "product": "Own1",
       "title": "Choose what each device can do",
-      "benefit": "The owner sets a device's access when approving it, and can change it at any time.",
-      "hours": 13
+      "benefit": "The owner sets a device's access when approving it, and can change it at any time."
     },
     {
       "date": "2026-11-18",
       "product": "Own1",
       "title": "Chat and images at the same time",
-      "benefit": "The box keeps room for the text and image models together, so neither waits for the other.",
-      "hours": 8
+      "benefit": "The box keeps room for the text and image models together, so neither waits for the other."
     },
     {
       "date": "2026-11-18",
       "product": "Nexy",
       "title": "One Nexy everywhere",
-      "benefit": "Own1 runs the same Nexy as the apps and the web, so every improvement reaches every device at once.",
-      "hours": 119
+      "benefit": "Own1 runs the same Nexy as the apps and the web, so every improvement reaches every device at once."
     },
     {
       "date": "2026-11-18",
       "product": "Own1",
       "title": "A choice of agent engines",
-      "benefit": "Owners can run Nexy Engine or one of two other open-source agents, each with its own tools.",
-      "hours": 103
+      "benefit": "Owners can run Nexy Engine or one of two other open-source agents, each with its own tools."
     },
     {
       "date": "2026-11-18",
       "product": "Own1",
       "title": "Safer device pairing",
-      "benefit": "Adding a device needs a recent owner sign-in and a single-use approval on the box.",
-      "hours": 133
+      "benefit": "Adding a device needs a recent owner sign-in and a single-use approval on the box."
     },
     {
       "date": "2026-11-12",
       "product": "Own1",
       "title": "Owner mode and demo mode, one system",
-      "benefit": "The same software runs a private owner box or a public demo, so the demo shows the real product.",
-      "hours": 50
+      "benefit": "The same software runs a private owner box or a public demo, so the demo shows the real product."
     },
     {
       "date": "2026-11-12",
       "product": "Own1",
       "title": "Devices page",
-      "benefit": "Pair phones and laptops, hand out guest codes, and remove a device in one tap.",
-      "hours": 50
+      "benefit": "Pair phones and laptops, hand out guest codes, and remove a device in one tap."
     },
     {
       "date": "2026-11-12",
       "product": "Own1",
       "title": "Your devices use your Own1's AI",
-      "benefit": "Paired laptops and phones run on the box's models, with the owner always first in line.",
-      "hours": 50
+      "benefit": "Paired laptops and phones run on the box's models, with the owner always first in line."
     },
     {
       "date": "2026-11-12",
       "product": "Own1",
       "title": "Publish a page from your box",
-      "benefit": "Share puts a saved page online and keeps it there until you unpublish it.",
-      "hours": 49
+      "benefit": "Share puts a saved page online and keeps it there until you unpublish it."
     },
     {
       "date": "2026-11-12",
       "product": "Own1",
       "title": "Nexy on Telegram",
-      "benefit": "Message your Own1's assistant from Telegram.",
-      "hours": 49
+      "benefit": "Message your Own1's assistant from Telegram."
     },
     {
       "date": "2026-11-04",
       "product": "Own1",
       "title": "Personal demo codes",
-      "benefit": "Every visitor gets their own one-time code to try the demo desktop.",
-      "hours": 92
+      "benefit": "Every visitor gets their own one-time code to try the demo desktop."
     },
     {
       "date": "2026-10-28",
       "product": "Nexy",
       "title": "Turn a chat into a project",
-      "benefit": "A conversation with several steps becomes a project you can come back to.",
-      "hours": 0
+      "benefit": "A conversation with several steps becomes a project you can come back to."
     },
     {
       "date": "2026-10-28",
       "product": "Nexy",
       "title": "Take over the agent's browser",
-      "benefit": "Watch the agent browse live, and take control yourself whenever you want.",
-      "hours": 40
+      "benefit": "Watch the agent browse live, and take control yourself whenever you want."
     },
     {
       "date": "2026-10-27",
       "product": "Image Studio",
       "title": "Image jobs wait their turn",
-      "benefit": "A queued image waits for the graphics card instead of failing.",
-      "hours": 27
+      "benefit": "A queued image waits for the graphics card instead of failing."
     },
     {
       "date": "2026-10-26",
       "product": "Own Startup",
       "title": "AI employees that leave receipts",
-      "benefit": "They work in their role, wait for your review and keep working with the tab closed.",
-      "hours": 21
+      "benefit": "They work in their role, wait for your review and keep working with the tab closed."
     },
     {
       "date": "2026-10-26",
       "product": "Nexy",
       "title": "Click any part of a page to edit it",
-      "benefit": "Point at a heading or a footer and say what to change.",
-      "hours": 29
+      "benefit": "Point at a heading or a footer and say what to change."
     },
     {
       "date": "2026-10-26",
       "product": "App Store",
       "title": "Every NixOS package, 365 self-hosted apps",
-      "benefit": "Browse, ask Nexy about an app, and open it with one link.",
-      "hours": 46
+      "benefit": "Browse, ask Nexy about an app, and open it with one link."
     },
     {
       "date": "2026-10-26",
       "product": "Nexy",
       "title": "Routines that run around the clock",
-      "benefit": "A new routine runs straight away, then on its schedule.",
-      "hours": 53
+      "benefit": "A new routine runs straight away, then on its schedule."
     },
     {
       "date": "2026-10-26",
       "product": "Own1",
       "title": "Report a problem, kept on your box",
-      "benefit": "Feedback is saved on the owner's own hardware, not sent away.",
-      "hours": 46
+      "benefit": "Feedback is saved on the owner's own hardware, not sent away."
     },
     {
       "date": "2026-10-26",
       "product": "Quality",
       "title": "One-command test suite",
-      "benefit": "Every change is checked by an automated suite that writes a readable report.",
-      "hours": 0
+      "benefit": "Every change is checked by an automated suite that writes a readable report."
     },
     {
       "date": "2026-10-23",
       "product": "Own1",
       "title": "Nexy becomes the Own1 assistant",
-      "benefit": "One always-on assistant across the whole desktop.",
-      "hours": 4
+      "benefit": "One always-on assistant across the whole desktop."
     },
     {
       "date": "2026-10-23",
       "product": "Nexy",
       "title": "Edit the open page in place",
-      "benefit": "Changes apply to the page you are looking at instead of rebuilding it.",
-      "hours": 6
+      "benefit": "Changes apply to the page you are looking at instead of rebuilding it."
     },
     {
       "date": "2026-10-20",
       "product": "Own1",
       "title": "Four conversations at once",
-      "benefit": "The text model now serves four requests at the same time.",
-      "hours": 18
+      "benefit": "The text model now serves four requests at the same time."
     },
     {
       "date": "2026-10-20",
       "product": "Own Build",
       "title": "Sites fix their own broken images",
-      "benefit": "A build repairs missing images and clipped labels instead of failing.",
-      "hours": 18
+      "benefit": "A build repairs missing images and clipped labels instead of failing."
     }
   ],
   "inReview": [

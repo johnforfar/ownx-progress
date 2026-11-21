@@ -7,7 +7,7 @@ All content lives in [`data/progress.json`](data/progress.json): one entry per t
 ## Update
 
 1. Edit `data/progress.json`: `news` is the hand-picked "What's new" list (newest first, five or six items). Each product in `tracks` has a `status` (`live`, `prototype`, `planned`), a one-line `summary`, two `highlights` and one `next`.
-2. `shipped` lists user-visible features (merge `date`, `product`, `title`, one-line `benefit`, `hours` from opened to merged; omit `hours` when there is no PR). `inReview` and `upcoming` feed "Coming next". Re-measure the `pace` facts from the PR history on each update.
+2. `shipped` lists user-visible features (merge `date`, `product`, `title`, one-line `benefit`, the merge day only, no shipping durations). `inReview` and `upcoming` feed "Coming next". Re-measure the `pace` facts from the PR history on each update; list newest first.
 3. Set `updated` at the top of the file.
 4. Preview locally with any static server, for example `npx serve .`, then commit.
 
