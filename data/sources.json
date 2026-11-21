@@ -1,0 +1,11 @@
+{
+  "_note": "Where each product's shipped work comes from. scripts/candidates.mjs reads these with gh. kind: prs (merged PRs), releases (release notes), commits (default branch).",
+  "sources": [
+    { "products": ["Own1", "OwnXOS", "OwnX Desktop"], "repo": "Plopmenz/own-demo", "kind": "prs" },
+    { "products": ["Nexy Apps"], "repo": "johnforfar/nexy-releases", "kind": "releases" },
+    { "products": ["Nexy Apps"], "repo": "johnforfar/nexy-engine", "kind": "commits" },
+    { "products": ["OwnX Console"], "repo": "johnforfar/ownx-console", "kind": "commits" },
+    { "products": ["OwnX CLI"], "repo": "johnforfar/ownx-cli", "kind": "commits" },
+    { "products": ["Earth Compute"], "repo": "johnforfar/earth-compute", "kind": "commits" }
+  ]
+}

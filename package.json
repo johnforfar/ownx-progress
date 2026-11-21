@@ -1,0 +1,12 @@
+{
+  "name": "ownx-progress",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "candidates": "node scripts/candidates.mjs",
+    "build": "node scripts/pace.mjs && node scripts/build.mjs && node scripts/check.mjs",
+    "test": "node scripts/check.mjs && node tests/layout.cjs",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "devDependencies": { "playwright": "1.62.0" }
+}

@@ -4,95 +4,90 @@
 
 Updated 2026-11-21. Page: https://progress.ownx.co/
 
+Engineering progress only: features may be in beta or early access, may not be on every device, and can change before general release. Planned work may change, move or be dropped.
+
 ## Products
-- Own1 (live): A personal AI computer: the AI runs on the box, and your data stays on hardware you own. Next: Owner approval for every outbound action
-- OwnXOS (live): The operating system under every Own1: each app in its own container, the whole system defined in one reproducible configuration. Next: Owner approval for every outbound action, and proof of which software each box runs
-- OwnX Desktop (live): The desktop on every Own1: an app store, studios and AI employees, in owner or demo mode. Next: Its own AI service, fully separate from the demo
+- Own1 (live): A personal AI computer: the AI runs on the Own1, and your data stays on hardware you own. Next: More owner controls over what the assistant does
+- OwnXOS (live): The operating system under every Own1: each app isolated, the whole system reproducible. Next: Verified software on every Own1
+- OwnX Desktop (live): The desktop on every Own1: an app store, studios and AI employees, in owner or demo mode. Next: One address and one sign-in for every app on the Own1
 - Nexy (live): One assistant for chat, research, projects and routines, the same wherever you run it. Next: One request built across all your devices at once, shown live
-- Nexy Engine (live): The agent behind Nexy: a new engine in Rust, built to stay out of the AI model's way. Next: Smarter research on slower models
+- Nexy Engine (live): The agent behind Nexy: a new engine in Rust, built to stay out of the AI model's way. Next: Better research on every model
 - Nexy for Mac and Windows (prototype): Nexy as a desktop app: on your own computer, in Nexy Cloud, or on your Own1. Next: Asking questions about a folder of documents
 - Nexy for Android and iPhone (prototype): Nexy on your phone, powered by your own Own1 or Nexy Cloud. The phone needs no AI model of its own. Next: iPhone app
-- Private network (prototype): An encrypted network joining your devices, where each device's address comes from its own key. Next: Your devices sharing AI: a phone using your Own1's GPU
+- Private network (prototype): An encrypted network joining your devices. Next: Your devices sharing AI: a phone using your Own1's GPU
 - Nexy Cloud (prototype): Nexy hosted for you, for anyone without an Own1 yet. Next: Accounts with passkey sign-in, then GPU credits
-- Earth Compute (live): Live index of what compute, AI and infrastructure really cost, with a global map of data centers and an API. Next: Paid API access using the shared OwnX sign-in.
-- OwnX Console (prototype): A console for running AI apps on servers you control, from choosing hardware to a live, one-click deploy. Next: Personal sign-in with passkeys, then owner-only deploy controls.
+- Earth Compute (live): Live index of what compute, AI and infrastructure really cost, with a global map of data centers and an API. Next: Paid API access using the shared OwnX sign-in
+- OwnX Console (prototype): A console for running AI apps on servers you control, from choosing hardware to a live, one-click deploy. Next: Team accounts with passkeys and roles
 - OwnX CLI (prototype): A command-line tool for your servers, with live prices from Earth Compute. Next: More commands as OwnX Console grows
 
-## Shipped features, newest first (date merged)
-- 2026-11-20, OwnXOS: Every update tested on a brand-new Own1. Each change is built and booted on a fresh box before release, so new owners get exactly what was tested.
-- 2026-11-20, OwnXOS: Leaner AI services, rewritten in Rust. Device pairing and the AI gateway now run as small, fast programs, leaving more of the box for the AI models.
-- 2026-11-19, Nexy Cloud: Nexy Cloud answers on a trusted Own1. Cloud users get answers from a full-size model on an Own1 that has spare capacity, and every reply says where it ran.
-- 2026-11-19, OwnXOS: One gateway for every AI model. A single service starts, shares and watches the box's models, and restarts one that stops responding.
+## Shipped features, newest first (release date)
+- 2026-11-20, OwnXOS: Every update tested on a fresh Own1. Each update is built and tested on a fresh Own1 before release.
+- 2026-11-20, OwnXOS: Faster, lighter AI services. Device pairing and the AI services now run as small, efficient programs.
+- 2026-11-19, OwnXOS: Every app shares the Own1's AI. Apps and paired devices all use the Own1's AI models, ready when they need them.
 - 2026-11-18, Own1: Choose what each device can do. The owner sets a device's access when approving it, and can change it at any time.
-- 2026-11-18, OwnXOS: Chat and images at the same time. The box keeps room for the text and image models together, so neither waits for the other.
+- 2026-11-18, OwnXOS: Chat and images at the same time. Text and image models run side by side.
 - 2026-11-18, Nexy Apps: One Nexy everywhere. Own1 runs the same Nexy as the apps and the web, so every improvement reaches every device at once.
 - 2026-11-18, OwnX Desktop: A choice of agent engines. Owners can run Nexy Engine or one of two other open-source agents, each with its own tools.
-- 2026-11-18, Own1: Safer device pairing. Adding a device needs a recent owner sign-in and a single-use approval on the box.
-- 2026-11-18, Nexy Apps: Use a friend's Own1 for AI. Sync with someone else's Own1 for its AI only, with guest screens that show whose Own1 you're on.
-- 2026-11-18, Nexy Apps: Images from your Own1 on any device. Ask for an image from a phone or laptop and Nexy waits for your Own1, showing progress.
+- 2026-11-18, Own1: Owner approval for every new device. Each device joins only after the owner approves it on the Own1.
+- 2026-11-18, Nexy Apps: Use a friend's Own1's AI. Connect to someone else's Own1 for its AI only, with guest screens that show whose Own1 you're on.
+- 2026-11-18, Nexy Apps: Images from your Own1 on any device. Ask for an image from a phone or laptop, and Nexy shows progress while your Own1 makes it.
 - 2026-11-17, OwnX Console: One-click deploy with a live log. Press Deploy once to see each build step as it runs, then get a working link to the live app when it finishes.
 - 2026-11-17, OwnX Console: Deploy plan on one screen. Before you deploy, you see the exact model, server and address the app will use, priced against the live compute market.
 - 2026-11-17, OwnX Console: Builder workspace. Apps you build for clients sit in their own workspace, clearly separate from the servers and services you run yourself.
 - 2026-11-17, OwnX Console: Public page for the sample hotel app. The sample hotel app now has a public home page where anyone can chat with its reservations assistant, with fair-use limits per visitor.
-- 2026-11-17, Nexy Apps: Only what your computer runs well. Nexy offers the features your model passed in our tests on a computer like yours, and points the rest to your Own1.
-- 2026-11-14, OwnX Console: Organisation and project switcher. Move between organisations and projects in one click, with live project counts and a page for each project.
-- 2026-11-14, OwnX Console: Fast first load. The console opens quickly, with compressed, cached assets and a placeholder layout while data arrives.
+- 2026-11-17, Nexy Apps: Only what your computer runs well. Nexy offers only what runs well on your computer, and hands the rest to your Own1.
+- 2026-11-14, OwnX Console: Organization and project switcher. Move between organizations and projects in one click, with live project counts and a page for each project.
 - 2026-11-14, OwnX Console: Agents, models and routing on real data. See your agents, models, inference routing, domains, a billing estimate and an architecture map built from your real servers, on desktop or phone.
 - 2026-11-14, OwnX Console: Cheapest-first setup guide. A step-by-step guide suggests the lowest-cost server and model that fit your app before you commit.
 - 2026-11-14, OwnX Console: Sample private AI reservations app. A ready-made example app with a private model, an inbox and an agent connector shows how to build and ship an AI app on your own server.
-- 2026-11-14, OwnX Console: Fleet dashboard and Earth Compute prices. One read-only view of your servers' health and usage beside live compute prices across data centre providers, with keys and private details kept out of every answer.
-- 2026-11-14, Nexy Apps: Reconnects by itself. If the link to your Own1 drops, Nexy reconnects on its own, and after an update it shows what changed.
+- 2026-11-14, OwnX Console: Fleet dashboard and Earth Compute prices. One view of your servers' health and usage beside live compute prices across data center providers.
+- 2026-11-14, Nexy Apps: Stays connected. Nexy keeps its link to your Own1, and after an update it shows what changed.
 - 2026-11-14, OwnX CLI: Cheapest compute and AI from the terminal. Ask for the lowest-cost server or AI model from Earth Compute's live prices, ranked by provider and location.
 - 2026-11-14, OwnX CLI: Deploy from the terminal. A deploy command that checks the plan before anything changes.
 - 2026-11-14, OwnX CLI: Usage and logs for every app. CPU, memory and storage per app, and every service's logs, the same figures the console shows.
-- 2026-11-14, OwnX CLI: Works with both server versions. Runs against current and next-generation servers, and installs with one Nix command.
 - 2026-11-13, Earth Compute: Add your data center. Data center operators can submit their facility from the Providers page and get a reference number straight away.
-- 2026-11-13, Earth Compute: New API docs and API access requests. Developers get short, accurate API docs and can request access from the same page.
-- 2026-11-13, Earth Compute: AI model prices refreshed hourly. AI model prices and their history in the API stay current through the day, not once a day.
+- 2026-11-13, Earth Compute: New API docs and API access requests. Developers get concise API docs and can request access from the same page.
+- 2026-11-13, Earth Compute: AI model prices refreshed hourly. AI model prices and their history in the API stay current through the day.
 - 2026-11-13, Nexy Apps: Nexy for Windows beta. Windows joins Mac and Android, and every app tells you in your chat when an update is ready.
-- 2026-11-13, Nexy Apps: Simpler, safer pairing. Type your Own1's name and Nexy finds it; a new device joins only when you tap Allow.
+- 2026-11-13, Nexy Apps: Pair by name. Type your Own1's name and Nexy finds it; a new device joins only when you tap Allow.
 - 2026-11-13, OwnX CLI: Your servers from the terminal. A command-line client shows your servers' apps, usage and logs, signed in with a key only you hold.
-- 2026-11-12, OwnX Desktop: Owner mode and demo mode, one system. The same software runs a private owner box or a public demo, so the demo shows the real product.
+- 2026-11-12, OwnX Desktop: Owner mode and demo mode, one system. The same software runs a private owner's Own1 or a public demo, so the demo shows the real product.
 - 2026-11-12, OwnX Desktop: Devices page. Pair phones and laptops, hand out guest codes, and remove a device in one tap.
-- 2026-11-12, Own1: Your devices use your Own1's AI. Paired laptops and phones run on the box's models, with the owner always first in line.
-- 2026-11-12, OwnX Desktop: Publish a page from your box. Share puts a saved page online and keeps it there until you unpublish it.
+- 2026-11-12, Own1: Your devices use your Own1's AI. Paired laptops and phones run on the Own1's models, with the owner given priority.
+- 2026-11-12, OwnX Desktop: Publish a page from your Own1. Share puts a saved page online and keeps it there until you unpublish it.
 - 2026-11-12, Nexy Apps: Nexy on Telegram. Message your Own1's assistant from Telegram.
 - 2026-11-12, Nexy Apps: Gmail and email-triggered routines. Connect Gmail read-only, and let a routine run when an email arrives, once you turn it on.
 - 2026-11-11, Nexy Apps: Your phone uses your Mac's Nexy. Scan a code and your phone runs on your Mac's AI; Nexy picks the best model the Mac can run.
 - 2026-11-10, Nexy Apps: Nexy 0.2 beta for Mac and Android. Run your own AI on your computer, or sync with your Own1 and use it from any device.
-- 2026-11-08, Earth Compute: Daily GPU price check. Every day, GPU prices are checked against the providers' own price lists, so the numbers people compare are ones they can actually buy at.
-- 2026-11-08, Nexy Apps: Prompts stay on your computer. On this-computer mode, every prompt stays on the computer unless you choose to use your Own1.
+- 2026-11-08, Earth Compute: Daily GPU price check. Every day, GPU prices are checked against the providers' own price lists.
+- 2026-11-08, Nexy Apps: Prompts stay on your computer. In on-device mode, every prompt stays on the computer unless you choose to use your Own1.
 - 2026-11-07, Earth Compute: Price freshness on the Providers page. Each provider shows when it was last checked and when its prices last changed.
 - 2026-11-06, Earth Compute: GPU price history by chip. For each GPU model, people can see how its price has moved across providers over time, in today's dollars.
 - 2026-11-06, Earth Compute: AI image, video, audio and embedding price indexes. One index line per AI service type shows how its price has changed since launch, with each vendor switchable on or off.
 - 2026-11-06, Nexy Apps: Nexy apps that update themselves. Nexy for Mac and Android installs its own updates and reaches your Own1 over the private network.
-- 2026-11-05, Earth Compute: Datacenters tab. Every facility on one searchable table, each row opening its own page with a 3D map.
+- 2026-11-05, Earth Compute: Data centers tab. Every facility on one searchable table, each row opening its own page with a 3D map.
 - 2026-11-04, OwnX Desktop: Personal demo codes. Every visitor gets their own one-time code to try the demo desktop.
 - 2026-10-28, Nexy Apps: Turn a chat into a project. A conversation with several steps becomes a project you can come back to.
 - 2026-10-28, Nexy Apps: Take over the agent's browser. Watch the agent browse live, and take control yourself whenever you want.
-- 2026-10-27, OwnX Desktop: Image jobs wait their turn. A queued image waits for the graphics card instead of failing.
-- 2026-10-26, OwnX Desktop: AI employees that leave receipts. They work in their role, wait for your review and keep working with the tab closed.
+- 2026-10-26, OwnX Desktop: AI employees that show their work. They work in their role, wait for your review and keep working with the tab closed.
 - 2026-10-26, Nexy Apps: Click any part of a page to edit it. Point at a heading or a footer and say what to change.
-- 2026-10-26, OwnX Desktop: Every NixOS package, 365 self-hosted apps. Browse, ask Nexy about an app, and open it with one link.
+- 2026-10-26, OwnX Desktop: 365 self-hosted apps, one click away. Browse, ask Nexy about an app, and open it with one link.
 - 2026-10-26, Nexy Apps: Routines that run around the clock. A new routine runs straight away, then on its schedule.
-- 2026-10-26, OwnX Desktop: Report a problem, kept on your box. Feedback is saved on the owner's own hardware, not sent away.
+- 2026-10-26, OwnX Desktop: Report a problem, kept on your Own1. Feedback is saved on the owner's own hardware, not sent away.
 - 2026-10-23, OwnX Desktop: Nexy becomes the Own1 assistant. One always-on assistant across the whole desktop.
 - 2026-10-23, Nexy Apps: Edit the open page in place. Changes apply to the page you are looking at instead of rebuilding it.
-- 2026-10-20, OwnXOS: Four conversations at once. The text model now serves four requests at the same time.
-- 2026-10-20, OwnX Desktop: Sites fix their own broken images. A build repairs missing images and clipped labels instead of failing.
-- 2026-10-02, Earth Compute: Instrument detail API. Developers can pull the full figures behind any index page, including breakdowns, inventory and regions, in one call.
-- 2026-08-12, Earth Compute: AI model catalogue in the API. Developers can query AI model prices and specs alongside compute, storage and network data.
+- 2026-10-20, OwnX Desktop: Website builds checked automatically. Each build is checked for images and layout before you see it.
+- 2026-10-02, Earth Compute: Full detail behind every index. Developers can pull the figures behind any index page, including breakdowns, inventory and regions, in one call.
+- 2026-08-12, Earth Compute: AI model catalog in the API. Developers can query AI model prices and specs alongside compute, storage and network data.
 
 ## In review
-- OwnX Desktop: One address and one sign-in for the whole box. Every app on an Own1 opens from a single address after a single sign-in.
-- OwnXOS: Agents ready on the very first boot. A brand-new box has its assistant working the first time it starts.
+- OwnX Desktop: One address and one sign-in for the whole Own1. Every app on an Own1 opens from a single address after a single sign-in.
 
 ## Planned
 - Nexy Cloud: Accounts with passkey sign-in. Sign in with your phone's or laptop's passkey; no password to remember.
-- Nexy Cloud: GPU credits. Buy credits for faster cloud GPUs when you need them; free use stays free.
+- Nexy Cloud: Faster cloud GPUs. Access to faster cloud GPUs when you need them.
 - Nexy Apps: iPhone app. Nexy on iPhone, joining Mac, Windows and Android.
-- Earth Compute: Paid API access with OwnX sign-in. One OwnX account to sign in, create API keys and pay for higher limits, with the same balance as other OwnX products.
-- Earth Compute: Globe view in the OwnX Console. The Earth Compute globe will show directly inside the console's Map tab.
-- OwnX Console: Personal sign-in. Each person signs in with their own account, including passkeys, instead of a shared login.
-- OwnX Console: Owner-only deploy controls. Only a project's owners can deploy or change it; everyone else gets a view-only console.
-- OwnX Console: Smarter setup defaults. The setup guide starts with the model and server that best fit your app, so most deploys need no changes.
+- Earth Compute: OwnX sign-in and API keys. One OwnX account to sign in and create API keys.
+- Earth Compute: Globe view in the OwnX Console. The Earth Compute globe is planned for the console's Map tab.
+- OwnX Console: Team accounts and roles. Teams sign in with their own accounts, including passkeys, with roles for who can deploy.
+- OwnX Console: Smarter setup defaults. The setup guide starts with the model and server that best fit your app.

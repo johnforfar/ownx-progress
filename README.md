@@ -1,22 +1,34 @@
 # OwnX progress
 
-Public progress for Own1, OwnXOS, Nexy and Earth Compute, published at [progress.ownx.co](https://progress.ownx.co).
+Public engineering progress for all of OwnX (Own1, OwnXOS, OwnX Desktop, Nexy Apps, Nexy Cloud, OwnX Console, OwnX CLI, Earth Compute), live at [progress.ownx.co](https://progress.ownx.co) (Vercel team `openmesh`, project `ownx-progress`).
 
-All content lives in [`data/progress.json`](data/progress.json): one entry per track, plus the monthly history. The page (`index.html`, `app.js`, `styles.css`) is static and has no build step.
+All content lives in [`data/progress.json`](data/progress.json). `render.js` turns it into HTML in the browser (`app.js`, which also runs the product filter) and at build time (`scripts/build.mjs`, which writes the content into `index.html` so crawlers and no-JS readers see it).
 
-## Update
+## Update (one command per step)
 
-1. Edit `data/progress.json`: `news` is the hand-picked "What's new" list (newest first, five or six items). Each product in `tracks` has a `status` (`live`, `prototype`, `planned`), a one-line `summary`, two `highlights` and one `next`.
-2. `shipped` lists user-visible features (merge `date`, `product`, `title`, one-line `benefit`, the merge day only, no shipping durations). `inReview` and `upcoming` feed "Coming next". Re-measure the `pace` facts from the PR history on each update; list newest first.
-3. Set `updated` at the top of the file.
-4. Run `node scripts/build.mjs`. It bakes the JSON into `index.html` (so search engines, answer engines and no-JS readers see the content) and writes the JSON-LD, `sitemap.xml`, `robots.txt` and `llms.txt`. The site URL is `SITE` in `render.js`; change it there when progress.ownx.co is live.
-5. Preview locally with any static server, for example `npx serve .`, then commit.
+```sh
+npm install                 # once: Playwright for the layout test
+npm run candidates          # everything shipped since `updated`, from data/sources.json -> candidates.md
+# edit data/progress.json: add rows to `shipped` from candidates.md, set `updated`
+npm run deploy              # re-measure pace, build, check, layout test, commit, push, Vercel, live check
+```
 
-## Content rules
+Only the editing step needs judgement. `candidates.md` tags lines `[probably skip]` (tests, docs, chores) and `[CAREFUL]` (fixes, security): describe the benefit, never the weakness.
 
-- Lead with impact in plain language; no changelog entries or internal detail.
-- Shipped work only under `news` and `highlights`; plans go under `next`.
-- No claim beyond what has been measured.
-- Plain language, no internal hostnames, addresses, credentials or access codes.
-- Describe what a change gives people; never list a fixed weakness. No PR numbers or links.
-- Usage figures are published only with sign-off.
+## Data
+
+- `shipped`: `date` (the release day, YYYY-MM-DD), `product` (one of `productOrder`), `title`, `benefit` (one plain sentence). Shown newest first. No shipping durations.
+- `inReview`, `upcoming`: product, title, benefit. No dates and no commitments.
+- `tracks`: one product card each: `group`, `status` (`live`, `prototype`, `planned`), `summary`, `highlights`, `next`, optional `link`.
+- `news`: hand-picked "What's new". `facts`: the headline numbers.
+- `pace`: written by `scripts/pace.mjs` from GitHub. Never edit it by hand.
+- `data/sources.json`: which repo feeds which product.
+
+## Content rules (scripts/check.mjs enforces what it can)
+
+- Engineering progress only. The disclaimer stays at the top, in "Coming next" and in the footer.
+- Describe what people get. Never name a fixed weakness, bug, security gap or current limit ("instead of failing", "now needs", "was open").
+- No secret sauce: no internal architecture, methods or stack beyond a normal product page.
+- No personal names, internal hosts or addresses, PR numbers, competitor or AI-vendor names, or web3, wallet or token words. Paid compute is "GPU credits", and only as a plan.
+- US spelling (data center, organization, catalog). Say "Own1", not "box".
+- No prices, dates or promises for unreleased work. Usage figures only with sign-off.
