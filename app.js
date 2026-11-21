@@ -1,49 +1,18 @@
-const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const month = (ym) => { const [y, m] = ym.split("-"); return `${MONTHS[+m - 1].slice(0, 3)} ${y}`; };
-const esc = (s) => String(s).replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
-const label = { live: "Live", prototype: "Prototype", planned: "Planned" };
+import { sections, chips, shipped } from "/render.js";
 
-async function render() {
+const $ = (id) => document.getElementById(id);
+
+async function main() {
   const d = await (await fetch("/data/progress.json")).json();
-  const $ = (id) => document.getElementById(id);
-  const [y, m, day] = d.updated.split("-");
-  $("updated").textContent = `${+day} ${MONTHS[+m - 1]} ${y}`;
-  $("intro").textContent = d.intro;
-  $("facts").innerHTML = d.facts.map((f) => `<div><b>${esc(f.value)}</b><span>${esc(f.label)}</span></div>`).join("");
-
-  $("news").innerHTML = d.news.map((u) =>
-    `<li><time>${month(u.date)}</time><span class="prod">${esc(u.product)}</span><div><b>${esc(u.title)}</b><p>${esc(u.text)}</p></div></li>`).join("");
-
-  $("products").innerHTML = d.tracks.map((t) => `
-    <article class="card" id="${esc(t.id)}">
-      <div class="top"><span class="group">${esc(t.group)}</span><span class="st ${t.status}">${label[t.status]}</span></div>
-      <h3>${esc(t.name)}</h3>
-      <p>${esc(t.summary)}</p>
-      <ul>${t.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>
-      ${t.next ? `<p class="next"><b>Next</b>${esc(t.next)}</p>` : ""}
-      ${t.link ? `<a class="link" href="${esc(t.link.url)}" rel="noopener">${esc(t.link.label)} →</a>` : ""}
-    </article>`).join("");
-
-  const short = (iso) => { const [, mm, dd] = iso.split("-"); return `${+dd} ${MONTHS[+mm - 1].slice(0, 3)}`; };
-  $("pace").innerHTML = d.pace.facts.map((f) => `<div><b>${esc(f.value)}</b><span>${esc(f.label)}</span></div>`).join("");
-  $("pace-note").textContent = d.pace.note;
-  const products = [...new Set(d.shipped.map((s) => s.product))];
+  for (const [id, html] of Object.entries(sections(d))) if ($(id)) $(id).innerHTML = html;
   let current = "All";
-  const draw = () => {
-    $("chips").innerHTML = ["All", ...products].map((p) =>
-      `<button type="button" aria-pressed="${p === current}" data-p="${esc(p)}">${esc(p)}</button>`).join("");
-    $("shipped").innerHTML = [...d.shipped].sort((a, b) => b.date.localeCompare(a.date)).filter((s) => current === "All" || s.product === current).map((s) =>
-      `<li><time datetime="${esc(s.date)}">${short(s.date)} ${s.date.slice(0, 4)}</time><span class="prod">${esc(s.product)}</span>` +
-      `<div><b>${esc(s.title)}</b><p>${esc(s.benefit)}</p></div></li>`).join("");
-  };
-  $("chips").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { current = b.dataset.p; draw(); } });
-  draw();
-  const soon = (list, k) => list.map((s) => `<li><span class="prod">${esc(s.product)}${s[k] ? ` · in review since ${short(s[k])}` : ""}</span><b>${esc(s.title)}</b><p>${esc(s.benefit)}</p></li>`).join("");
-  $("review").innerHTML = soon(d.inReview, "opened");
-  $("upcoming").innerHTML = soon(d.upcoming);
-
-  $("history").innerHTML = d.history.map((h) =>
-    `<div><h3>${esc(h.month)} 2026</h3><ul>${h.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></div>`).join("");
+  $("chips").addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    current = b.dataset.p;
+    $("chips").innerHTML = chips(d, current);
+    $("shipped").innerHTML = shipped(d, current);
+  });
 }
 
-render();
+main();
