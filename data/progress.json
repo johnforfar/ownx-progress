@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-21",
-  "intro": "Own1 is a personal AI computer you keep at home or in the office. Nexy is the assistant on it, and now on your laptop, your phone and in the cloud too, all connected to your own Own1 over a private network.",
+  "intro": "OwnX builds AI you control. Own1 is a personal AI computer for your home or office. Nexy is its assistant, on your laptop, your phone and in the cloud too. OwnX Console runs AI apps on servers you choose, and Earth Compute maps what that computing power costs around the world.",
   "facts": [
     {
       "value": "3.5 MB",
@@ -175,15 +175,30 @@
       "group": "Compute",
       "name": "Earth Compute",
       "status": "live",
-      "summary": "A live map of what computing power costs around the world, by provider and region.",
+      "summary": "Live index of what compute, AI and infrastructure really cost, with a global map of data centers and an API.",
       "highlights": [
-        "Powers the live compute figures on the OpenX Network site"
+        "Price history for GPUs, AI models, storage, RAM and bandwidth in today's dollars",
+        "Every data center on a searchable table and 3D map",
+        "Prices checked daily against providers' own price lists"
       ],
       "link": {
         "label": "Open the map",
         "url": "https://earth.ownx.co"
       },
-      "next": "Choosing where cloud work runs, by price"
+      "next": "Paid API access using the shared OwnX sign-in."
+    },
+    {
+      "id": "ownx-console",
+      "group": "Cloud",
+      "name": "OwnX Console",
+      "summary": "A console for running AI apps on servers you control, from choosing hardware to a live, one-click deploy.",
+      "highlights": [
+        "One-click deploy with a live step log and a working link at the end",
+        "Live compute prices across data centre providers beside your own fleet",
+        "Builder workspace keeps client apps separate from your own servers"
+      ],
+      "next": "Personal sign-in with passkeys, then owner-only deploy controls.",
+      "status": "prototype"
     }
   ],
   "history": [
@@ -400,6 +415,126 @@
       "product": "Own Build",
       "title": "Sites fix their own broken images",
       "benefit": "A build repairs missing images and clipped labels instead of failing."
+    },
+    {
+      "date": "2026-11-13",
+      "product": "Earth Compute",
+      "title": "Add your data center",
+      "benefit": "Data center operators can submit their facility from the Providers page and get a reference number straight away."
+    },
+    {
+      "date": "2026-11-13",
+      "product": "Earth Compute",
+      "title": "New API docs and API access requests",
+      "benefit": "Developers get short, accurate API docs and can request access from the same page."
+    },
+    {
+      "date": "2026-11-13",
+      "product": "Earth Compute",
+      "title": "AI model prices refreshed hourly",
+      "benefit": "AI model prices and their history in the API stay current through the day, not once a day."
+    },
+    {
+      "date": "2026-11-08",
+      "product": "Earth Compute",
+      "title": "Daily GPU price check",
+      "benefit": "Every day, GPU prices are checked against the providers' own price lists, so the numbers people compare are ones they can actually buy at."
+    },
+    {
+      "date": "2026-11-07",
+      "product": "Earth Compute",
+      "title": "Price freshness on the Providers page",
+      "benefit": "Each provider shows when it was last checked and when its prices last changed."
+    },
+    {
+      "date": "2026-11-06",
+      "product": "Earth Compute",
+      "title": "GPU price history by chip",
+      "benefit": "For each GPU model, people can see how its price has moved across providers over time, in today's dollars."
+    },
+    {
+      "date": "2026-11-06",
+      "product": "Earth Compute",
+      "title": "AI image, video, audio and embedding price indexes",
+      "benefit": "One index line per AI service type shows how its price has changed since launch, with each vendor switchable on or off."
+    },
+    {
+      "date": "2026-11-05",
+      "product": "Earth Compute",
+      "title": "Datacenters tab",
+      "benefit": "Every facility on one searchable table, each row opening its own page with a 3D map."
+    },
+    {
+      "date": "2026-10-02",
+      "product": "Earth Compute",
+      "title": "Instrument detail API",
+      "benefit": "Developers can pull the full figures behind any index page, including breakdowns, inventory and regions, in one call."
+    },
+    {
+      "date": "2026-08-12",
+      "product": "Earth Compute",
+      "title": "AI model catalogue in the API",
+      "benefit": "Developers can query AI model prices and specs alongside compute, storage and network data."
+    },
+    {
+      "date": "2026-11-17",
+      "product": "OwnX Console",
+      "title": "One-click deploy with a live log",
+      "benefit": "Press Deploy once to see each build step as it runs, then get a working link to the live app when it finishes."
+    },
+    {
+      "date": "2026-11-17",
+      "product": "OwnX Console",
+      "title": "Deploy plan on one screen",
+      "benefit": "Before you deploy, you see the exact model, server and address the app will use, priced against the live compute market."
+    },
+    {
+      "date": "2026-11-17",
+      "product": "OwnX Console",
+      "title": "Builder workspace",
+      "benefit": "Apps you build for clients sit in their own workspace, clearly separate from the servers and services you run yourself."
+    },
+    {
+      "date": "2026-11-17",
+      "product": "OwnX Console",
+      "title": "Public page for the sample hotel app",
+      "benefit": "The sample hotel app now has a public home page where anyone can chat with its reservations assistant, with fair-use limits per visitor."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "OwnX Console",
+      "title": "Organisation and project switcher",
+      "benefit": "Move between organisations and projects in one click, with live project counts and a page for each project."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "OwnX Console",
+      "title": "Fast first load",
+      "benefit": "The console opens quickly, with compressed, cached assets and a placeholder layout while data arrives."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "OwnX Console",
+      "title": "Agents, models and routing on real data",
+      "benefit": "See your agents, models, inference routing, domains, a billing estimate and an architecture map built from your real servers, on desktop or phone."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "OwnX Console",
+      "title": "Cheapest-first setup guide",
+      "benefit": "A step-by-step guide suggests the lowest-cost server and model that fit your app before you commit."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "OwnX Console",
+      "title": "Sample private AI reservations app",
+      "benefit": "A ready-made example app with a private model, an inbox and an agent connector shows how to build and ship an AI app on your own server."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "OwnX Console",
+      "title": "Fleet dashboard and Earth Compute prices",
+      "benefit": "One read-only view of your servers' health and usage beside live compute prices across data centre providers, with keys and private details kept out of every answer."
     }
   ],
   "inReview": [
@@ -431,6 +566,31 @@
       "product": "Nexy apps",
       "title": "iPhone app",
       "benefit": "Nexy on iPhone, joining Mac, Windows and Android."
+    },
+    {
+      "product": "Earth Compute",
+      "title": "Paid API access with OwnX sign-in",
+      "benefit": "One OwnX account to sign in, create API keys and pay for higher limits, with the same balance as other OwnX products."
+    },
+    {
+      "product": "Earth Compute",
+      "title": "Globe view in the OwnX Console",
+      "benefit": "The Earth Compute globe will show directly inside the console's Map tab."
+    },
+    {
+      "product": "OwnX Console",
+      "title": "Personal sign-in",
+      "benefit": "Each person signs in with their own account, including passkeys, instead of a shared login."
+    },
+    {
+      "product": "OwnX Console",
+      "title": "Owner-only deploy controls",
+      "benefit": "Only a project's owners can deploy or change it; everyone else gets a view-only console."
+    },
+    {
+      "product": "OwnX Console",
+      "title": "Smarter setup defaults",
+      "benefit": "The setup guide starts with the model and server that best fit your app, so most deploys need no changes."
     }
   ]
 }

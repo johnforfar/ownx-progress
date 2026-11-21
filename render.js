@@ -1,5 +1,5 @@
 // Shared by the browser (app.js) and the build (scripts/build.mjs).
-export const SITE = "https://ownx-progress.vercel.app";
+export const SITE = "https://progress.ownx.co";
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
 const ym = (s) => { const [y, m] = s.split("-"); return `${MONTHS[+m - 1].slice(0, 3)} ${y}`; };
@@ -54,7 +54,7 @@ export function jsonLd(d) {
     "@graph": [
       org,
       { "@type": "WebPage", "@id": `${SITE}/`, url: `${SITE}/`, name: "OwnX Progress",
-        description: "What OwnX has shipped across Own1, Nexy and Earth Compute, feature by feature, and what comes next.",
+        description: "Everything OwnX has shipped across Own1, Nexy, OwnX Console and Earth Compute, feature by feature, and what comes next.",
         dateModified: d.updated, inLanguage: "en", publisher: { "@id": `${SITE}/#org` },
         about: d.tracks.map((t) => ({ "@type": "Thing", name: t.name, description: t.summary })),
         mainEntity: { "@id": `${SITE}/#shipped` } },
