@@ -66,7 +66,33 @@ section { display: grid; gap: 20px; }
 .history ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: .9rem; display: grid; gap: 4px; }
 footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); padding-top: 20px; }
 
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips button { font: 500 12px/1 var(--mono); color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 99px; padding: 7px 11px; cursor: pointer; }
+.chips button[aria-pressed="true"] { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+.chips button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pace { margin-top: 0; }
+.shipped { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
+.shipped li { display: grid; grid-template-columns: 64px 120px minmax(0, 1fr) 92px; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.shipped time, .shipped .prod { font: 500 12px var(--mono); color: var(--muted); }
+.shipped .prod { color: var(--accent); }
+.shipped b { font-weight: 600; }
+.shipped p { margin: 2px 0 0; color: var(--muted); font-size: .94rem; }
+.took { font: 500 11px/1.8 var(--mono); color: var(--live); border: 1px solid rgba(111, 207, 151, .45); border-radius: 99px; padding: 0 9px; justify-self: end; white-space: nowrap; }
+.note { margin: 0; color: var(--muted); font-size: .85rem; }
+.coming { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.coming > div { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: grid; gap: 12px; align-content: start; }
+.coming h3 { font-size: 1.1rem; }
+.soon { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.soon li { display: grid; gap: 2px; border-left: 2px solid var(--line); padding-left: 12px; }
+.soon .prod { font: 500 11px var(--mono); letter-spacing: .04em; color: var(--planned); }
+.soon p { margin: 0; color: var(--muted); font-size: .93rem; }
+
 @media (max-width: 760px) {
+  .coming { grid-template-columns: minmax(0, 1fr); }
+  .shipped li { grid-template-columns: 56px minmax(0, 1fr) auto; gap: 4px 12px; }
+  .shipped .prod { grid-column: 2; grid-row: 1; }
+  .shipped li > div { grid-column: 1 / -1; }
+  .shipped .took { grid-column: 3; grid-row: 1; }
   .facts, .history { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .news li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
 }

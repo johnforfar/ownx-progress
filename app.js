@@ -24,6 +24,26 @@ async function render() {
       ${t.link ? `<a class="link" href="${esc(t.link.url)}" rel="noopener">${esc(t.link.label)} →</a>` : ""}
     </article>`).join("");
 
+  const short = (iso) => { const [, mm, dd] = iso.split("-"); return `${+dd} ${MONTHS[+mm - 1].slice(0, 3)}`; };
+  const took = (h) => h === undefined ? "" : h < 24 ? "Under a day" : `${Math.round(h / 24)} day${Math.round(h / 24) > 1 ? "s" : ""}`;
+  $("pace").innerHTML = d.pace.facts.map((f) => `<div><b>${esc(f.value)}</b><span>${esc(f.label)}</span></div>`).join("");
+  $("pace-note").textContent = d.pace.note;
+  const products = [...new Set(d.shipped.map((s) => s.product))];
+  let current = "All";
+  const draw = () => {
+    $("chips").innerHTML = ["All", ...products].map((p) =>
+      `<button type="button" aria-pressed="${p === current}" data-p="${esc(p)}">${esc(p)}</button>`).join("");
+    $("shipped").innerHTML = d.shipped.filter((s) => current === "All" || s.product === current).map((s) =>
+      `<li><time datetime="${esc(s.date)}">${short(s.date)}</time><span class="prod">${esc(s.product)}</span>` +
+      `<div><b>${esc(s.title)}</b><p>${esc(s.benefit)}</p></div>` +
+      (s.hours === undefined ? "<span></span>" : `<span class="took" title="Opened for review to shipped">${took(s.hours)}</span>`) + `</li>`).join("");
+  };
+  $("chips").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { current = b.dataset.p; draw(); } });
+  draw();
+  const soon = (list, k) => list.map((s) => `<li><span class="prod">${esc(s.product)}${s[k] ? ` · in review since ${short(s[k])}` : ""}</span><b>${esc(s.title)}</b><p>${esc(s.benefit)}</p></li>`).join("");
+  $("review").innerHTML = soon(d.inReview, "opened");
+  $("upcoming").innerHTML = soon(d.upcoming);
+
   $("history").innerHTML = d.history.map((h) =>
     `<div><h3>${esc(h.month)} 2026</h3><ul>${h.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></div>`).join("");
 }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-21",
   "intro": "Own1 is a personal AI computer you keep at home or in the office. Nexy is the assistant on it, and now on your laptop, your phone and in the cloud too, all connected to your own Own1 over a private network.",
   "facts": [
     {
@@ -117,14 +117,14 @@
       "status": "prototype",
       "summary": "Nexy as a desktop app: on your own computer, in Nexy Cloud, or on your Own1.",
       "highlights": [
-        "Mac and Windows beta, with a download page and install guide",
+        "Mac and Windows beta, with automatic updates",
         "Can share its graphics card with your Own1, so your other devices use it"
       ],
       "link": {
         "label": "Download for Mac",
         "url": "https://github.com/johnforfar/nexy-releases/releases/latest"
       },
-      "next": "Windows, and asking questions about a folder of documents"
+      "next": "Asking questions about a folder of documents"
     },
     {
       "id": "nexy-mobile",
@@ -162,13 +162,13 @@
       "summary": "Nexy hosted for you, for anyone without an Own1 yet.",
       "highlights": [
         "A private, isolated machine for each user",
-        "Early beta on CPU servers; faster hardware is next"
+        "Answers on a trusted Own1 first, then on its own model"
       ],
       "link": {
         "label": "Try the beta",
         "url": "https://nc.buildooors.com"
       },
-      "next": "GPU capacity and accounts"
+      "next": "Accounts with passkey sign-in, then GPU credits"
     },
     {
       "id": "earth-compute",
@@ -217,6 +217,255 @@
         "Routines that run around the clock",
         "AI employees with owner approval"
       ]
+    }
+  ],
+  "pace": {
+    "note": "Shipping time runs from when a change is opened for review to when it is merged and released.",
+    "facts": [
+      {
+        "value": "290+",
+        "label": "improvements shipped to Own1 since July"
+      },
+      {
+        "value": "12 h",
+        "label": "typical time from opening a change to shipping it"
+      },
+      {
+        "value": "2 in 3",
+        "label": "changes shipped within a day"
+      },
+      {
+        "value": "34",
+        "label": "Nexy app releases in 13 days, each tested before release"
+      }
+    ]
+  },
+  "shipped": [
+    {
+      "date": "2026-11-20",
+      "product": "Own1",
+      "title": "Every update tested on a brand-new Own1",
+      "benefit": "Each change is built and booted on a fresh box before release, so new owners get exactly what was tested.",
+      "hours": 8
+    },
+    {
+      "date": "2026-11-20",
+      "product": "Own1",
+      "title": "Leaner AI services, rewritten in Rust",
+      "benefit": "Device pairing and the AI gateway now run as small, fast programs, leaving more of the box for the AI models.",
+      "hours": 54
+    },
+    {
+      "date": "2026-11-19",
+      "product": "Nexy Cloud",
+      "title": "Nexy Cloud answers on a trusted Own1",
+      "benefit": "Cloud users get answers from a full-size model on an Own1 that has spare capacity, and every reply says where it ran."
+    },
+    {
+      "date": "2026-11-19",
+      "product": "Own1",
+      "title": "One gateway for every AI model",
+      "benefit": "A single service starts, shares and watches the box's models, and restarts one that stops responding.",
+      "hours": 72
+    },
+    {
+      "date": "2026-11-18",
+      "product": "Own1",
+      "title": "Choose what each device can do",
+      "benefit": "The owner sets a device's access when approving it, and can change it at any time.",
+      "hours": 13
+    },
+    {
+      "date": "2026-11-18",
+      "product": "Own1",
+      "title": "Chat and images at the same time",
+      "benefit": "The box keeps room for the text and image models together, so neither waits for the other.",
+      "hours": 8
+    },
+    {
+      "date": "2026-11-18",
+      "product": "Nexy",
+      "title": "One Nexy everywhere",
+      "benefit": "Own1 runs the same Nexy as the apps and the web, so every improvement reaches every device at once.",
+      "hours": 119
+    },
+    {
+      "date": "2026-11-18",
+      "product": "Own1",
+      "title": "A choice of agent engines",
+      "benefit": "Owners can run Nexy Engine or one of two other open-source agents, each with its own tools.",
+      "hours": 103
+    },
+    {
+      "date": "2026-11-18",
+      "product": "Own1",
+      "title": "Safer device pairing",
+      "benefit": "Adding a device needs a recent owner sign-in and a single-use approval on the box.",
+      "hours": 133
+    },
+    {
+      "date": "2026-11-12",
+      "product": "Own1",
+      "title": "Owner mode and demo mode, one system",
+      "benefit": "The same software runs a private owner box or a public demo, so the demo shows the real product.",
+      "hours": 50
+    },
+    {
+      "date": "2026-11-12",
+      "product": "Own1",
+      "title": "Devices page",
+      "benefit": "Pair phones and laptops, hand out guest codes, and remove a device in one tap.",
+      "hours": 50
+    },
+    {
+      "date": "2026-11-12",
+      "product": "Own1",
+      "title": "Your devices use your Own1's AI",
+      "benefit": "Paired laptops and phones run on the box's models, with the owner always first in line.",
+      "hours": 50
+    },
+    {
+      "date": "2026-11-12",
+      "product": "Own1",
+      "title": "Publish a page from your box",
+      "benefit": "Share puts a saved page online and keeps it there until you unpublish it.",
+      "hours": 49
+    },
+    {
+      "date": "2026-11-12",
+      "product": "Own1",
+      "title": "Nexy on Telegram",
+      "benefit": "Message your Own1's assistant from Telegram.",
+      "hours": 49
+    },
+    {
+      "date": "2026-11-04",
+      "product": "Own1",
+      "title": "Personal demo codes",
+      "benefit": "Every visitor gets their own one-time code to try the demo desktop.",
+      "hours": 92
+    },
+    {
+      "date": "2026-10-28",
+      "product": "Nexy",
+      "title": "Turn a chat into a project",
+      "benefit": "A conversation with several steps becomes a project you can come back to.",
+      "hours": 0
+    },
+    {
+      "date": "2026-10-28",
+      "product": "Nexy",
+      "title": "Take over the agent's browser",
+      "benefit": "Watch the agent browse live, and take control yourself whenever you want.",
+      "hours": 40
+    },
+    {
+      "date": "2026-10-27",
+      "product": "Image Studio",
+      "title": "Image jobs wait their turn",
+      "benefit": "A queued image waits for the graphics card instead of failing.",
+      "hours": 27
+    },
+    {
+      "date": "2026-10-26",
+      "product": "Own Startup",
+      "title": "AI employees that leave receipts",
+      "benefit": "They work in their role, wait for your review and keep working with the tab closed.",
+      "hours": 21
+    },
+    {
+      "date": "2026-10-26",
+      "product": "Nexy",
+      "title": "Click any part of a page to edit it",
+      "benefit": "Point at a heading or a footer and say what to change.",
+      "hours": 29
+    },
+    {
+      "date": "2026-10-26",
+      "product": "App Store",
+      "title": "Every NixOS package, 365 self-hosted apps",
+      "benefit": "Browse, ask Nexy about an app, and open it with one link.",
+      "hours": 46
+    },
+    {
+      "date": "2026-10-26",
+      "product": "Nexy",
+      "title": "Routines that run around the clock",
+      "benefit": "A new routine runs straight away, then on its schedule.",
+      "hours": 53
+    },
+    {
+      "date": "2026-10-26",
+      "product": "Own1",
+      "title": "Report a problem, kept on your box",
+      "benefit": "Feedback is saved on the owner's own hardware, not sent away.",
+      "hours": 46
+    },
+    {
+      "date": "2026-10-26",
+      "product": "Quality",
+      "title": "One-command test suite",
+      "benefit": "Every change is checked by an automated suite that writes a readable report.",
+      "hours": 0
+    },
+    {
+      "date": "2026-10-23",
+      "product": "Own1",
+      "title": "Nexy becomes the Own1 assistant",
+      "benefit": "One always-on assistant across the whole desktop.",
+      "hours": 4
+    },
+    {
+      "date": "2026-10-23",
+      "product": "Nexy",
+      "title": "Edit the open page in place",
+      "benefit": "Changes apply to the page you are looking at instead of rebuilding it.",
+      "hours": 6
+    },
+    {
+      "date": "2026-10-20",
+      "product": "Own1",
+      "title": "Four conversations at once",
+      "benefit": "The text model now serves four requests at the same time.",
+      "hours": 18
+    },
+    {
+      "date": "2026-10-20",
+      "product": "Own Build",
+      "title": "Sites fix their own broken images",
+      "benefit": "A build repairs missing images and clipped labels instead of failing.",
+      "hours": 18
+    }
+  ],
+  "inReview": [
+    {
+      "opened": "2026-11-17",
+      "product": "Own1",
+      "title": "One address and one sign-in for the whole box",
+      "benefit": "Every app on an Own1 opens from a single address after a single sign-in."
+    },
+    {
+      "opened": "2026-11-20",
+      "product": "Own1",
+      "title": "Agents ready on the very first boot",
+      "benefit": "A brand-new box has its assistant working the first time it starts."
+    }
+  ],
+  "upcoming": [
+    {
+      "product": "Nexy Cloud",
+      "title": "Accounts with passkey sign-in",
+      "benefit": "Sign in with your phone's or laptop's passkey; no password to remember."
+    },
+    {
+      "product": "Nexy Cloud",
+      "title": "GPU credits",
+      "benefit": "Buy credits for faster cloud GPUs when you need them; free use stays free."
+    },
+    {
+      "product": "Nexy apps",
+      "title": "iPhone app",
+      "benefit": "Nexy on iPhone, joining Mac, Windows and Android."
     }
   ]
 }
