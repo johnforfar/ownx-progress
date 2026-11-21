@@ -68,14 +68,26 @@
         "AI employees that research, design, write and build, with owner approval before anything is published",
         "Image, music, voice and website studios that run entirely on the box"
       ],
+      "next": "Owner approval for every outbound action"
+    },
+    {
+      "id": "ownxos",
+      "group": "OwnXOS",
+      "name": "OwnXOS",
+      "status": "live",
+      "summary": "The operating system under every Own1: each app in its own container, the whole system defined in one reproducible configuration.",
+      "highlights": [
+        "One gateway shares the box's AI models between apps and devices",
+        "Every update is built and booted on a fresh box before release"
+      ],
       "next": "Owner approval for every outbound action, and proof of which software each box runs"
     },
     {
       "id": "own-private",
       "group": "OwnXOS",
-      "name": "Own1 private desktop",
+      "name": "OwnX Desktop",
       "status": "live",
-      "summary": "A desktop only the owner can open, kept apart from the public demo.",
+      "summary": "The desktop on every Own1: an app store, studios and AI employees, in owner or demo mode.",
       "highlights": [
         "Signed in with a key only the owner holds",
         "Now opens from the Nexy desktop and Android apps, over the private network"
@@ -199,6 +211,18 @@
       ],
       "next": "Personal sign-in with passkeys, then owner-only deploy controls.",
       "status": "prototype"
+    },
+    {
+      "id": "ownx-cli",
+      "group": "Cloud",
+      "name": "OwnX CLI",
+      "status": "prototype",
+      "summary": "A command-line tool for your servers, with live prices from Earth Compute.",
+      "highlights": [
+        "Apps, usage and logs for every server",
+        "Finds the cheapest compute or AI model, then deploys"
+      ],
+      "next": "More commands as OwnX Console grows"
     }
   ],
   "history": [
@@ -235,7 +259,7 @@
     }
   ],
   "pace": {
-    "note": "Dates show the day each change was merged and released.",
+    "note": "Dates show the day each change was merged and released. Every change passes automated tests before it ships.",
     "facts": [
       {
         "value": "290+",
@@ -250,13 +274,13 @@
   "shipped": [
     {
       "date": "2026-11-20",
-      "product": "Own1",
+      "product": "OwnXOS",
       "title": "Every update tested on a brand-new Own1",
       "benefit": "Each change is built and booted on a fresh box before release, so new owners get exactly what was tested."
     },
     {
       "date": "2026-11-20",
-      "product": "Own1",
+      "product": "OwnXOS",
       "title": "Leaner AI services, rewritten in Rust",
       "benefit": "Device pairing and the AI gateway now run as small, fast programs, leaving more of the box for the AI models."
     },
@@ -268,7 +292,7 @@
     },
     {
       "date": "2026-11-19",
-      "product": "Own1",
+      "product": "OwnXOS",
       "title": "One gateway for every AI model",
       "benefit": "A single service starts, shares and watches the box's models, and restarts one that stops responding."
     },
@@ -280,19 +304,19 @@
     },
     {
       "date": "2026-11-18",
-      "product": "Own1",
+      "product": "OwnXOS",
       "title": "Chat and images at the same time",
       "benefit": "The box keeps room for the text and image models together, so neither waits for the other."
     },
     {
       "date": "2026-11-18",
-      "product": "Nexy",
+      "product": "Nexy Apps",
       "title": "One Nexy everywhere",
       "benefit": "Own1 runs the same Nexy as the apps and the web, so every improvement reaches every device at once."
     },
     {
       "date": "2026-11-18",
-      "product": "Own1",
+      "product": "OwnX Desktop",
       "title": "A choice of agent engines",
       "benefit": "Owners can run Nexy Engine or one of two other open-source agents, each with its own tools."
     },
@@ -304,13 +328,13 @@
     },
     {
       "date": "2026-11-12",
-      "product": "Own1",
+      "product": "OwnX Desktop",
       "title": "Owner mode and demo mode, one system",
       "benefit": "The same software runs a private owner box or a public demo, so the demo shows the real product."
     },
     {
       "date": "2026-11-12",
-      "product": "Own1",
+      "product": "OwnX Desktop",
       "title": "Devices page",
       "benefit": "Pair phones and laptops, hand out guest codes, and remove a device in one tap."
     },
@@ -322,97 +346,91 @@
     },
     {
       "date": "2026-11-12",
-      "product": "Own1",
+      "product": "OwnX Desktop",
       "title": "Publish a page from your box",
       "benefit": "Share puts a saved page online and keeps it there until you unpublish it."
     },
     {
       "date": "2026-11-12",
-      "product": "Own1",
+      "product": "Nexy Apps",
       "title": "Nexy on Telegram",
       "benefit": "Message your Own1's assistant from Telegram."
     },
     {
       "date": "2026-11-04",
-      "product": "Own1",
+      "product": "OwnX Desktop",
       "title": "Personal demo codes",
       "benefit": "Every visitor gets their own one-time code to try the demo desktop."
     },
     {
       "date": "2026-10-28",
-      "product": "Nexy",
+      "product": "Nexy Apps",
       "title": "Turn a chat into a project",
       "benefit": "A conversation with several steps becomes a project you can come back to."
     },
     {
       "date": "2026-10-28",
-      "product": "Nexy",
+      "product": "Nexy Apps",
       "title": "Take over the agent's browser",
       "benefit": "Watch the agent browse live, and take control yourself whenever you want."
     },
     {
       "date": "2026-10-27",
-      "product": "Image Studio",
+      "product": "OwnX Desktop",
       "title": "Image jobs wait their turn",
       "benefit": "A queued image waits for the graphics card instead of failing."
     },
     {
       "date": "2026-10-26",
-      "product": "Own Startup",
+      "product": "OwnX Desktop",
       "title": "AI employees that leave receipts",
       "benefit": "They work in their role, wait for your review and keep working with the tab closed."
     },
     {
       "date": "2026-10-26",
-      "product": "Nexy",
+      "product": "Nexy Apps",
       "title": "Click any part of a page to edit it",
       "benefit": "Point at a heading or a footer and say what to change."
     },
     {
       "date": "2026-10-26",
-      "product": "App Store",
+      "product": "OwnX Desktop",
       "title": "Every NixOS package, 365 self-hosted apps",
       "benefit": "Browse, ask Nexy about an app, and open it with one link."
     },
     {
       "date": "2026-10-26",
-      "product": "Nexy",
+      "product": "Nexy Apps",
       "title": "Routines that run around the clock",
       "benefit": "A new routine runs straight away, then on its schedule."
     },
     {
       "date": "2026-10-26",
-      "product": "Own1",
+      "product": "OwnX Desktop",
       "title": "Report a problem, kept on your box",
       "benefit": "Feedback is saved on the owner's own hardware, not sent away."
     },
     {
-      "date": "2026-10-26",
-      "product": "Quality",
-      "title": "One-command test suite",
-      "benefit": "Every change is checked by an automated suite that writes a readable report."
-    },
-    {
       "date": "2026-10-23",
-      "product": "Own1",
+      "product": "OwnX Desktop",
       "title": "Nexy becomes the Own1 assistant",
       "benefit": "One always-on assistant across the whole desktop."
     },
     {
       "date": "2026-10-23",
-      "product": "Nexy",
+      "product": "Nexy Apps",
       "title": "Edit the open page in place",
       "benefit": "Changes apply to the page you are looking at instead of rebuilding it."
     },
     {
       "date": "2026-10-20",
-      "product": "Own1",
+      "product": "OwnXOS",
       "title": "Four conversations at once",
       "benefit": "The text model now serves four requests at the same time."
     },
     {
       "date": "2026-10-20",
-      "product": "Own Build",
+      "product": "OwnX Desktop",
       "title": "Sites fix their own broken images",
       "benefit": "A build repairs missing images and clipped labels instead of failing."
     },
@@ -535,18 +553,114 @@
       "product": "OwnX Console",
       "title": "Fleet dashboard and Earth Compute prices",
       "benefit": "One read-only view of your servers' health and usage beside live compute prices across data centre providers, with keys and private details kept out of every answer."
+    },
+    {
+      "date": "2026-11-18",
+      "product": "Nexy Apps",
+      "title": "Use a friend's Own1 for AI",
+      "benefit": "Sync with someone else's Own1 for its AI only, with guest screens that show whose Own1 you're on."
+    },
+    {
+      "date": "2026-11-18",
+      "product": "Nexy Apps",
+      "title": "Images from your Own1 on any device",
+      "benefit": "Ask for an image from a phone or laptop and Nexy waits for your Own1, showing progress."
+    },
+    {
+      "date": "2026-11-17",
+      "product": "Nexy Apps",
+      "title": "Only what your computer runs well",
+      "benefit": "Nexy offers the features your model passed in our tests on a computer like yours, and points the rest to your Own1."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "Nexy Apps",
+      "title": "Reconnects by itself",
+      "benefit": "If the link to your Own1 drops, Nexy reconnects on its own, and after an update it shows what changed."
+    },
+    {
+      "date": "2026-11-13",
+      "product": "Nexy Apps",
+      "title": "Nexy for Windows beta",
+      "benefit": "Windows joins Mac and Android, and every app tells you in your chat when an update is ready."
+    },
+    {
+      "date": "2026-11-13",
+      "product": "Nexy Apps",
+      "title": "Simpler, safer pairing",
+      "benefit": "Type your Own1's name and Nexy finds it; a new device joins only when you tap Allow."
+    },
+    {
+      "date": "2026-11-12",
+      "product": "Nexy Apps",
+      "title": "Gmail and email-triggered routines",
+      "benefit": "Connect Gmail read-only, and let a routine run when an email arrives, once you turn it on."
+    },
+    {
+      "date": "2026-11-11",
+      "product": "Nexy Apps",
+      "title": "Your phone uses your Mac's Nexy",
+      "benefit": "Scan a code and your phone runs on your Mac's AI; Nexy picks the best model the Mac can run."
+    },
+    {
+      "date": "2026-11-10",
+      "product": "Nexy Apps",
+      "title": "Nexy 0.2 beta for Mac and Android",
+      "benefit": "Run your own AI on your computer, or sync with your Own1 and use it from any device."
+    },
+    {
+      "date": "2026-11-08",
+      "product": "Nexy Apps",
+      "title": "Prompts stay on your computer",
+      "benefit": "On this-computer mode, every prompt stays on the computer unless you choose to use your Own1."
+    },
+    {
+      "date": "2026-11-06",
+      "product": "Nexy Apps",
+      "title": "Nexy apps that update themselves",
+      "benefit": "Nexy for Mac and Android installs its own updates and reaches your Own1 over the private network."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "OwnX CLI",
+      "title": "Cheapest compute and AI from the terminal",
+      "benefit": "Ask for the lowest-cost server or AI model from Earth Compute's live prices, ranked by provider and location."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "OwnX CLI",
+      "title": "Deploy from the terminal",
+      "benefit": "A deploy command that checks the plan before anything changes."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "OwnX CLI",
+      "title": "Usage and logs for every app",
+      "benefit": "CPU, memory and storage per app, and every service's logs, the same figures the console shows."
+    },
+    {
+      "date": "2026-11-14",
+      "product": "OwnX CLI",
+      "title": "Works with both server versions",
+      "benefit": "Runs against current and next-generation servers, and installs with one Nix command."
+    },
+    {
+      "date": "2026-11-13",
+      "product": "OwnX CLI",
+      "title": "Your servers from the terminal",
+      "benefit": "A command-line client shows your servers' apps, usage and logs, signed in with a key only you hold."
     }
   ],
   "inReview": [
     {
       "opened": "2026-11-17",
-      "product": "Own1",
+      "product": "OwnX Desktop",
       "title": "One address and one sign-in for the whole box",
       "benefit": "Every app on an Own1 opens from a single address after a single sign-in."
     },
     {
       "opened": "2026-11-20",
-      "product": "Own1",
+      "product": "OwnXOS",
       "title": "Agents ready on the very first boot",
       "benefit": "A brand-new box has its assistant working the first time it starts."
     }
@@ -563,7 +677,7 @@
       "benefit": "Buy credits for faster cloud GPUs when you need them; free use stays free."
     },
     {
-      "product": "Nexy apps",
+      "product": "Nexy Apps",
       "title": "iPhone app",
       "benefit": "Nexy on iPhone, joining Mac, Windows and Android."
     },
@@ -592,5 +706,15 @@
       "title": "Smarter setup defaults",
       "benefit": "The setup guide starts with the model and server that best fit your app, so most deploys need no changes."
     }
+  ],
+  "productOrder": [
+    "Own1",
+    "OwnXOS",
+    "OwnX Desktop",
+    "Nexy Apps",
+    "Nexy Cloud",
+    "OwnX Console",
+    "OwnX CLI",
+    "Earth Compute"
   ]
 }

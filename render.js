@@ -8,7 +8,7 @@ const label = { live: "Live", prototype: "Prototype", planned: "Planned" };
 const facts = (list) => list.map((f) => `<div><b>${esc(f.value)}</b><span>${esc(f.label)}</span></div>`).join("");
 const soon = (list, k) => list.map((s) => `<li><span class="prod">${esc(s.product)}${s[k] ? ` · in review since ${ymd(s[k]).slice(0, -5)}` : ""}</span><b>${esc(s.title)}</b><p>${esc(s.benefit)}</p></li>`).join("");
 
-export const products = (d) => [...new Set(d.shipped.map((s) => s.product))];
+export const products = (d) => (d.productOrder ?? [...new Set(d.shipped.map((s) => s.product))]).filter((p) => d.shipped.some((s) => s.product === p));
 export const newest = (d) => [...d.shipped].sort((a, b) => b.date.localeCompare(a.date));
 
 export function chips(d, current = "All") {
